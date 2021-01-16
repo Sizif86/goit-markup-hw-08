@@ -1,0 +1,130 @@
+.backdrope {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity $time-animation $time-function;
+}
+.backdrope.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.button-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.button-close:hover,
+.button.sent:hover,
+.form-completed:hover * {
+  cursor: url("../images/finger.svg"), pointer;
+}
+
+.modal-window .button-head {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-close {
+  fill: currentColor;
+}
+.button-close:hover,
+.button-close:focus,
+.form-input:focus + .img-form,
+textarea:focus + .img-form {
+  color: $accent-text;
+}
+.form-title {
+  margin-bottom: 12px;
+  color: $text-title-color;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+.form-completed {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.form-lable {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+.form-input {
+  height: 40px;
+  padding: 12px 42px;
+}
+.img-form {
+  color: $text-title-color;
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+}
+.form-allow {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.checkbox {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.checkbox-label {
+  display: inline-block;
+}
+
+.checkbox:checked + .checkbox-label::before {
+  background-color: $accent-text;
+  background-image: url("../imeges/icon-check.svg");
+  border-width: 0;
+}
+.checkbox-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $text-title-color;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.form-link {
+  color: #2196f3;
+  text-decoration: underline;
+}

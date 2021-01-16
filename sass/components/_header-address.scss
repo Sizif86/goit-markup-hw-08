@@ -1,0 +1,33 @@
+.address {
+  margin-left: auto;
+  font-style: normal;
+}
+
+.address-nav {
+  display: flex;
+  font-style: normal;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: $accent-text;
+}
+
+.address-link {
+  color: $main-text-color;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color $time-animation $time-function;
+  &:focus,
+  &:hover {
+    color: $accent-text;
+  }
+}
+.address-nav .item + .item {
+  margin-left: 30px;
+}
+.icon-header {
+  margin-right: 10px;
+  fill: currentColor;
+  vertical-align: middle;
+}

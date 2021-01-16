@@ -1,0 +1,22 @@
+.clients:not(:last-child) {
+  width: calc((100% - 30px) / 6);
+  margin-right: 30px;
+}
+.item-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition: border $time-animation $time-function,
+    color $time-animation $time-function;
+}
+.item-logo:hover,
+.item-logo:focus {
+  fill: $accent-text;
+  border-color: $accent-text;
+}
