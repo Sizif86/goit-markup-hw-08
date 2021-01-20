@@ -4,8 +4,24 @@
 }
 
 .address-nav {
-  display: flex;
-  font-style: normal;
+  @media screen and (max-width: $tablet1) {
+    font-size: 18px;
+    line-height: 1.16;
+
+    & .item + .item {
+      margin-top: 16px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop1) {
+    & .item + .item {
+      margin-top: 10px;
+    }
+  }
+
+  &.item + .item {
+    margin-left: 30px;
+  }
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -23,9 +39,7 @@
     color: $accent-text;
   }
 }
-.address-nav .item + .item {
-  margin-left: 30px;
-}
+
 .icon-header {
   margin-right: 10px;
   fill: currentColor;

@@ -35,8 +35,17 @@ p {
   margin: 0;
 }
 .main-nav {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+
+  position: relative;
+
+  border-bottom: 1px solid #ececec;
+  padding-top: 16px;
+
+  @media screen and (max-width: $tablet1) {
+    padding-bottom: 16px;
+  }
 }
 .button {
   display: inline-block;

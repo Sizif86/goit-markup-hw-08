@@ -387,12 +387,15 @@ p {
 }
 
 .main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  border-bottom: 1px solid #ececec;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-nav {
+    padding-bottom: 16px;
+  }
 }
 
 .button {
@@ -422,6 +425,24 @@ p {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
@@ -512,11 +533,24 @@ p {
   font-style: normal;
 }
 
-.address-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-style: normal;
+@media screen and (max-width: 767px) {
+  .address-nav {
+    font-size: 18px;
+    line-height: 1.16;
+  }
+  .address-nav .item + .item {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address-nav .item + .item {
+    margin-top: 10px;
+  }
+}
+
+.address-nav.item + .item {
+  margin-left: 30px;
 }
 
 .site-nav .link:hover,
@@ -535,10 +569,6 @@ p {
 
 .address-link:focus, .address-link:hover {
   color: #2196f3;
-}
-
-.address-nav .item + .item {
-  margin-left: 30px;
 }
 
 .icon-header {
